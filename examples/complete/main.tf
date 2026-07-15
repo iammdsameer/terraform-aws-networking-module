@@ -1,10 +1,3 @@
-# terraform-aws-networking-module
-
-This module allows you to create a VPC and subnets configurations in it in the AWS. This module supports `public` and `private` subnets configuration. You can have as many subnets you want. For the ID of the subnets, and VPC, the module provides it as the output.
-
-Below is an example usage for the module.
-
-```hcl
 module "vpc" {
   source = "./modules/networking"
   vpc_config = {
@@ -35,5 +28,3 @@ output "private_subnets" {
 output "public_subnets" {
   value = module.vpc.public_subnets
 }
-
-```
